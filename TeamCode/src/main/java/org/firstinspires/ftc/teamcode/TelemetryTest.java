@@ -47,7 +47,7 @@ import org.firstinspires.ftc.robotcore.external.Telemetry;
  * Also see the Telemetry javadocs.
  */
 @TeleOp(name = "Concept: Telemetry", group = "Concept")
-@Disabled
+//@Disabled
 public class TelemetryTest extends LinearOpMode  {
     /** Keeps track of the line of the poem which is to be emitted next */
     int poemLine = 0;
@@ -128,10 +128,7 @@ public class TelemetryTest extends LinearOpMode  {
         // Go go gadget robot!
         while (opModeIsActive()) {
 
-            // Emit poetry if it's been a while
-            if (poemElapsed.seconds() > sPoemInterval) {
-                emitPoemLine();
-            }
+
 
             // As an illustration, show some loop timing information
             telemetry.addData("loop count", loopCount);
@@ -156,12 +153,7 @@ public class TelemetryTest extends LinearOpMode  {
         }
     }
 
-    // emits a line of poetry to the telemetry log
-    void emitPoemLine() {
-        telemetry.log().add(poem[poemLine]);
-        poemLine = (poemLine+1) % poem.length;
-        poemElapsed.reset();
-    }
+
 
     // Computes the current battery voltage
     double getBatteryVoltage() {

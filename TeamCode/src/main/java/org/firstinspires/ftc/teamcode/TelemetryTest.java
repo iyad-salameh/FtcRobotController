@@ -46,39 +46,13 @@ import org.firstinspires.ftc.robotcore.external.Telemetry;
  *
  * Also see the Telemetry javadocs.
  */
-@TeleOp(name = "Concept: Telemetry", group = "Concept")
+//@TeleOp(name = "Concept: Telemetry", group = "Concept")
+@TeleOp(name = "test: Telemetry", group = "testers")
 //@Disabled
 public class TelemetryTest extends LinearOpMode  {
-    /** Keeps track of the line of the poem which is to be emitted next */
-    int poemLine = 0;
 
-    /** Keeps track of how long it's been since we last emitted a line of poetry */
+
     ElapsedTime poemElapsed = new ElapsedTime();
-
-    static final String[] poem = new String[] {
-
-        "Mary had a little lamb,",
-        "His fleece was white as snow,",
-        "And everywhere that Mary went,",
-        "The lamb was sure to go.",
-        "",
-        "He followed her to school one day,",
-        "Which was against the rule,",
-        "It made the children laugh and play",
-        "To see a lamb at school.",
-        "",
-        "And so the teacher turned it out,",
-        "But still it lingered near,",
-        "And waited patiently about,",
-        "Till Mary did appear.",
-        "",
-        "\"Why does the lamb love Mary so?\"",
-        "The eager children cry.",
-        "\"Why, Mary loves the lamb, you know,\"",
-        "The teacher did reply.",
-        "",
-        ""
-    };
 
     @Override public void runOpMode() {
 
@@ -86,7 +60,7 @@ public class TelemetryTest extends LinearOpMode  {
          * to have some interesting data to show */
         ElapsedTime opmodeRunTime = new ElapsedTime();
 
-        // We show the log in oldest-to-newest order, as that's better for poetry
+
         telemetry.log().setDisplayOrder(Telemetry.Log.DisplayOrder.OLDEST_FIRST);
         // We can control the number of lines shown in the log
         telemetry.log().setCapacity(6);
@@ -152,7 +126,6 @@ public class TelemetryTest extends LinearOpMode  {
             loopCount++;
         }
     }
-
 
 
     // Computes the current battery voltage
